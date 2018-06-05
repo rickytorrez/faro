@@ -26,4 +26,5 @@ public class RouteController {
 			return "redirect:/restaurant/dashboard";
 		}
 	}
+	
 }
