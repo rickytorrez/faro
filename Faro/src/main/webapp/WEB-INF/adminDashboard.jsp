@@ -12,21 +12,15 @@
 		<a href="/restaurant/logout">Log Out</a>
 		<h1>Welcome ${admin.name}</h1>
 		
+		<form method="post" action="/reservation/new">
+			<input type="date" id="day" value="day"  name="day" />
+			<select name="time">
+				<option value="8:00 p.m.">8:00 p.m.</option>
+				<option value="8:15 p.m.">8:15 p.m.</option>			
+			</select>
+			<input type="submit" value="Create!"/>
+		</form>
 		
 		
-		<form:form action="/reservation/new" method="POST" modelAttribute="reservation">
-			<form:label path="day">Date:
-				<form:input type="date" path="day"></form:input>
-			</form:label>
-			
-			<form:label path="time">Time:
-				<form:select path="time">
-					<form:option value="8:00 p.m.">8:00 p.m.</form:option>
-					<form:option value="8:00 p.m.">8:15 p.m.</form:option>
-				</form:select>
-			</form:label>
-			
-			<input type="submit" value="Create Reservation"/>
-		</form:form>
 	</body>
 </html>
