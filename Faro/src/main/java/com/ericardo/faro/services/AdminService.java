@@ -5,17 +5,17 @@ import javax.servlet.http.HttpSession;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.ericardo.faro.models.Restaurant;
-import com.ericardo.faro.repositories.RestaurantRepository;
+import com.ericardo.faro.models.Admin;
+import com.ericardo.faro.repositories.AdminRepository;
 
 @Service
-public class RestaurantService {
+public class AdminService {
 
-	private RestaurantRepository _rR;
+	private AdminRepository _aR;
 	private BCryptPasswordEncoder _bcrypt;
 	
-	public RestaurantService(RestaurantRepository _rR) {
-		this._rR = _rR;
+	public AdminService(AdminRepository _aR) {
+		this._aR = _aR;
 		this._bcrypt = encoder();
 	}
 	
@@ -65,21 +65,25 @@ public class RestaurantService {
 
 	/************************************ STANDARD CRUD **************************************/
 	
-	public Restaurant create(Restaurant restaurant) {
-		restaurant.setPassword(_bcrypt.encode(restaurant.getPassword()));
-		return _rR.save(restaurant);
+	public Admin create(Admin admin) {
+		admin.setPassword(_bcrypt.encode(admin.getPassword()));
+		return _aR.save(admin);
 	}
 	
-	public Restaurant find(Long id) {
-		return (Restaurant) _rR.findOne(id);
+	public Admin find(Long id) {
+		return (Admin) _aR.findOne(id);
 	}
 	
-	public void update(Restaurant restaurant) {
-		_rR.save(restaurant);
+	public void update(Admin admin) {
+		_aR.save(admin);
 	}
 	
 	public void destroy(Long id) {
-		_rR.delete(id);
+		_aR.delete(id);
+	}
+	
+	public Admin findByEmail(String email) {
+		return _aR.findByEmail(email);
 	}
 	
 }

@@ -3,9 +3,9 @@ package com.ericardo.faro.repositories;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import com.ericardo.faro.models.Restaurant;
+import com.ericardo.faro.models.Reservation;
 
 @Repository
-public interface RestaurantRepository extends CrudRepository<Restaurant, Long> {
+public interface ReservationRepository extends CrudRepository<Reservation, Long> {
 
 }

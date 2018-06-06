@@ -7,21 +7,21 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.ericardo.faro.services.RestaurantService;
+import com.ericardo.faro.services.AdminService;
 
 @Controller
 @RequestMapping("/**")
 public class RouteController {
 
 	@Autowired
-	private RestaurantService _rR;
+	private AdminService _rR;
 	
 	/************ ROUTE THAT TAKES YOU HOME OR DASHBOARD IF ADMIN IS IN SESSION **************/
 
 	@RequestMapping("")
 	public String index(HttpServletRequest _request, HttpSession _session) {
 		if(!_rR.isValid(_session)) {
-			return "home";
+			return "index";
 		} else {
 			return "redirect:/restaurant/dashboard";
 		}

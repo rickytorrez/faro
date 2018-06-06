@@ -2,10 +2,13 @@ package com.ericardo.faro.models;
 
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.validation.constraints.Size;
@@ -14,7 +17,7 @@ import org.hibernate.validator.constraints.Email;
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
-public class Restaurant {
+public class Admin {
 
 	/*************************************** ATTRIBUTES **************************************/
 	@Id
@@ -38,8 +41,24 @@ public class Restaurant {
 
 	/************************************* RELATIONSHIPS *************************************/
 	 	
+	/*********************************** with reservation ************************************/
+	
+	@OneToMany(mappedBy="admin", fetch=FetchType.LAZY)
+	private List<Reservation> reservation;
+	
+	public List<Reservation> getReservation() {
+		return reservation;
+	}
+
+	public void setReservation(List<Reservation> reservation) {
+		this.reservation = reservation;
+	}
+	
 	/*************************************** with user ***************************************/
+
 	 	
+
+
 	/********************************* PERSIST AND UPDATE  **********************************/
 	 	
 	@PrePersist
@@ -103,7 +122,7 @@ public class Restaurant {
 
 	/********************************** EMPTY CONSTRUCTOR  **********************************/
 	 	
-	public Restaurant() {
+	public Admin() {
 	 	this.createdAt = new Date();
 	 	this.updatedAt = new Date();
 	}
