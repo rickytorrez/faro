@@ -10,7 +10,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
-import javax.validation.constraints.Size;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -22,13 +21,10 @@ public class Reservation {
 	@GeneratedValue
 	private Long id;
 	
-	private Date day;
+	private String day;
 
-	@Size(min=1, max=25, message="Please provide a valid time.")
 	private String time;
 	
-	private boolean available;
-	 	
 	@DateTimeFormat(pattern="MM:dd:yyyy HH:mm:ss")
 	private Date createdAt;
 	 	
@@ -77,11 +73,11 @@ public class Reservation {
 		this.id = id;
 	}
 
-	public Date getDay() {
+	public String getDay() {
 		return day;
 	}
 
-	public void setDay(Date day) {
+	public void setDay(String day) {
 		this.day = day;
 	}	
 	
@@ -91,14 +87,6 @@ public class Reservation {
 
 	public void setTime(String time) {
 		this.time = time;
-	}
-
-	public boolean isAvailable() {
-		return available;
-	}
-
-	public void setAvailable(boolean available) {
-		this.available = available;
 	}
 
 	public Date getCreatedAt() {

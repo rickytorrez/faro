@@ -1,7 +1,5 @@
 package com.ericardo.faro.controllers;
 
-import java.util.Date;
-
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,28 +25,6 @@ public class ReservationController {
 	@Autowired
 	private AdminService _aS;
 
-	/********************* METHOD TO CREATE A NEW AVAILABLE RESERVATION **********************/
-	
-	@PostMapping("/new")
-	public String createReservation(@RequestParam("day") Date day, @RequestParam("time") String time, BindingResult _result, HttpSession _session, RedirectAttributes _flash){
-		if(_session.getAttribute("id") == null) {
-			return "redirect:/";
-		}
-		
-		System.out.println("");
-		
-		Reservation reservation = new Reservation();
-		
-		Admin admin = _aS.find( (Long) _session.getAttribute("id"));
-		if(_result.hasErrors()) {
-			_flash.addFlashAttribute("error", _result.getAllErrors());
-			return "/restaurant/dashboard";
-		} else {
-			System.out.println("Creating Reservation on _rC");
-			reservation.setAdmin(admin);
-			_rS.create(reservation);
-			return "redirect:/restaurant/dashboard";
-		} 
-	}
+
 	
 }

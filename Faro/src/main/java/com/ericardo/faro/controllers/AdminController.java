@@ -1,5 +1,9 @@
 package com.ericardo.faro.controllers;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
@@ -16,19 +20,23 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.ericardo.faro.models.Admin;
 import com.ericardo.faro.models.Reservation;
 import com.ericardo.faro.services.AdminService;
+import com.ericardo.faro.services.ReservationService;
 
 @Controller
 @RequestMapping("/restaurant/")
 public class AdminController {
 	
 	@Autowired
-	private AdminService _aR;
+	private AdminService _aS;
+	
+	@Autowired
+	private ReservationService _rS;
 	
 	/******************************** LOG IN ROUTE FOR ADMIN *********************************/
 
 	@RequestMapping("/login")
 	public String logAdmin(@ModelAttribute("admin") Admin admin, HttpSession _session) {
-		_aR.logout(_session);
+		_aS.logout(_session);
 		return "adminLogin";
 	}
 
@@ -39,11 +47,11 @@ public class AdminController {
 			_flash.addFlashAttribute("error", _result.getAllErrors());
 			return "adminLogin";
 		} else {
-			Admin _exists = _aR.findByEmail(admin.getEmail());
+			Admin _exists = _aS.findByEmail(admin.getEmail());
 			
 			if(_exists == null) {
-				Admin _admin = _aR.create(admin);
-				_aR.login(_session, _admin.getId());
+				Admin _admin = _aS.create(admin);
+				_aS.login(_session, _admin.getId());
 				return "redirect:/restaurant/dashboard";
 			} else {
 				_flash.addFlashAttribute("error", "An admin with this e-mail already exists.");
@@ -60,14 +68,14 @@ public class AdminController {
 			return "redirect:/restaurant/login";
 		} 
 		
-		Admin admin = _aR.findByEmail(email);
+		Admin admin = _aS.findByEmail(email);
 		
 		if(admin == null) {
 			_flash.addFlashAttribute("error", "No admin with this email was found.");
 			return "redirect:/restaurant/login";
 		} else {
-			if(_aR.isMatch(password, admin.getPassword())) {
-				_aR.login(_session, admin.getId());
+			if(_aS.isMatch(password, admin.getPassword())) {
+				_aS.login(_session, admin.getId());
 				return "redirect:/restaurant/dashboard";
 			} else {
 				_flash.addFlashAttribute("error", "Invalid Credentials");
@@ -88,15 +96,94 @@ public class AdminController {
 	/********************************** ADMIN DASHBOARD **************************************/
 	
 	@RequestMapping("/dashboard")
-	public String adminDashboard(HttpSession _session, Model _model, @ModelAttribute("reservation") Reservation reservation ) {
+	public String adminDashboard(HttpSession _session, Model _model) {
 		if(_session.getAttribute("id") == null) {
 			return "redirect:/";
 		} 
 		
-		Admin admin = _aR.find( (Long) _session.getAttribute("id"));
+		Admin admin = _aS.find( (Long) _session.getAttribute("id"));
 		_model.addAttribute("admin", admin);
 		return "adminDashboard";
 		
 	}
 	
+	/********************* METHOD TO CREATE A NEW AVAILABLE RESERVATION  **********************/
+	/******************************* * @throws ParseException *********************************/
+	
+	@PostMapping("/newReservation")
+	public String createReservation(HttpSession _session, RedirectAttributes _flash,
+			@RequestParam("day") String day, 
+			@RequestParam("time") String time) throws ParseException{
+		
+		if(_session.getAttribute("id") == null) {
+			return "redirect:/";
+		}
+		
+		Admin admin = _aS.find( (Long) _session.getAttribute("id"));
+		
+		Reservation reservation = new Reservation();
+		
+			SimpleDateFormat parser = new SimpleDateFormat("yyyy-mm-dd");
+			Date date = parser.parse(day);
+			
+			SimpleDateFormat formatter = new SimpleDateFormat("EEEE MMMM dd, yyyy");
+			String newDate = formatter.format(date);
+			
+			System.out.println("this works? bitch");
+			System.out.println(newDate);
+			
+			reservation.setAdmin(admin);
+			reservation.setDay(newDate);
+			reservation.setTime(time);
+			_rS.create(reservation);
+			return "redirect:/restaurant/dashboard";
+		} 
 }
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	/********************* METHOD TO CREATE A NEW AVAILABLE RESERVATION **********************/
+	
+//	@PostMapping("/newReservation")
+//	public String createReservation(@Valid @ModelAttribute("Reservation") Reservation reservation, BindingResult _result, HttpSession _session, RedirectAttributes _flash){
+//		if(_session.getAttribute("id") == null) {
+//			return "redirect:/";
+//		}
+//		
+//		System.out.println("creating a reservation");
+//		
+//		Admin admin = _aS.find( (Long) _session.getAttribute("id"));
+//		
+//		if(_result.hasErrors()) {
+//			_flash.addFlashAttribute("error", _result.getAllErrors());
+//			return "/restaurant/dashboard";
+//		} else {
+//			System.out.println("Creating Reservation on _rC");
+//			reservation.setAdmin(admin);
+//			_rS.create(reservation);
+//			return "redirect:/restaurant/dashboard";
+//		} 
+//	}
+	
+
