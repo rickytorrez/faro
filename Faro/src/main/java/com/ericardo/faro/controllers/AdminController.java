@@ -103,6 +103,7 @@ public class AdminController {
 		
 		Admin admin = _aS.find( (Long) _session.getAttribute("id"));
 		_model.addAttribute("admin", admin);
+		_model.addAttribute("reservation", _rS.all());
 		return "adminDashboard";
 		
 	}
@@ -137,53 +138,5 @@ public class AdminController {
 			reservation.setTime(time);
 			_rS.create(reservation);
 			return "redirect:/restaurant/dashboard";
-		} 
+		}
 }
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	/********************* METHOD TO CREATE A NEW AVAILABLE RESERVATION **********************/
-	
-//	@PostMapping("/newReservation")
-//	public String createReservation(@Valid @ModelAttribute("Reservation") Reservation reservation, BindingResult _result, HttpSession _session, RedirectAttributes _flash){
-//		if(_session.getAttribute("id") == null) {
-//			return "redirect:/";
-//		}
-//		
-//		System.out.println("creating a reservation");
-//		
-//		Admin admin = _aS.find( (Long) _session.getAttribute("id"));
-//		
-//		if(_result.hasErrors()) {
-//			_flash.addFlashAttribute("error", _result.getAllErrors());
-//			return "/restaurant/dashboard";
-//		} else {
-//			System.out.println("Creating Reservation on _rC");
-//			reservation.setAdmin(admin);
-//			_rS.create(reservation);
-//			return "redirect:/restaurant/dashboard";
-//		} 
-//	}
-	
-
