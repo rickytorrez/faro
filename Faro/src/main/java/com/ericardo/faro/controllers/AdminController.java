@@ -109,7 +109,6 @@ public class AdminController {
 	}
 	
 	/********************* METHOD TO CREATE A NEW AVAILABLE RESERVATION  **********************/
-	/******************************* * @throws ParseException *********************************/
 	
 	@PostMapping("/newReservation")
 	public String createReservation(HttpSession _session, RedirectAttributes _flash,
