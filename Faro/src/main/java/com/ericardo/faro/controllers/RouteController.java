@@ -5,22 +5,28 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.ericardo.faro.services.AdminService;
+import com.ericardo.faro.services.ReservationService;
 
 @Controller
 @RequestMapping("/**")
 public class RouteController {
 
 	@Autowired
-	private AdminService _rR;
+	private AdminService _aS;
+	
+	@Autowired
+	private ReservationService _rS;
 	
 	/************ ROUTE THAT TAKES YOU HOME OR DASHBOARD IF ADMIN IS IN SESSION **************/
 
 	@RequestMapping("")
-	public String index(HttpServletRequest _request, HttpSession _session) {
-		if(!_rR.isValid(_session)) {
+	public String index(HttpServletRequest _request, HttpSession _session, Model _model) {
+		if(!_aS.isValid(_session)) {
+			_model.addAttribute("reservations", _rS.all());
 			return "index";
 		} else {
 			return "redirect:/restaurant/dashboard";

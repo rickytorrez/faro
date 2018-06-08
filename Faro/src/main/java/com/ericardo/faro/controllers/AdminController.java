@@ -103,7 +103,7 @@ public class AdminController {
 		
 		Admin admin = _aS.find( (Long) _session.getAttribute("id"));
 		_model.addAttribute("admin", admin);
-		_model.addAttribute("reservation", _rS.all());
+		_model.addAttribute("reservations", _rS.all());
 		return "adminDashboard";
 		
 	}
@@ -114,23 +114,20 @@ public class AdminController {
 	public String createReservation(HttpSession _session, RedirectAttributes _flash,
 			@RequestParam("day") String day, 
 			@RequestParam("time") String time) throws ParseException{
-		
 		if(_session.getAttribute("id") == null) {
 			return "redirect:/";
 		}
 		
 		Admin admin = _aS.find( (Long) _session.getAttribute("id"));
-		
 		Reservation reservation = new Reservation();
 		
+			// Gets the date
 			SimpleDateFormat parser = new SimpleDateFormat("yyyy-mm-dd");
-			Date date = parser.parse(day);
 			
+			Date date = parser.parse(day);
+			// Formats it to the app needs
 			SimpleDateFormat formatter = new SimpleDateFormat("EEEE MMMM dd, yyyy");
 			String newDate = formatter.format(date);
-			
-			System.out.println("this works? bitch");
-			System.out.println(newDate);
 			
 			reservation.setAdmin(admin);
 			reservation.setDay(newDate);

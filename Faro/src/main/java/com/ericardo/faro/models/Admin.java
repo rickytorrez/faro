@@ -54,11 +54,6 @@ public class Admin {
 		this.reservation = reservation;
 	}
 	
-	/*************************************** with user ***************************************/
-
-	 	
-
-
 	/********************************* PERSIST AND UPDATE  **********************************/
 	 	
 	@PrePersist
