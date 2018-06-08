@@ -29,9 +29,9 @@ public class ReservationController {
 		return "reservation";
 	}
 
-	@PostMapping("/new")
-	public String newReservation(@PathVariable("id") Long id, @ModelAttribute("guest") Guest guest ) {
-		return "/null";
+	@PostMapping("/{id}/new")
+	public String newReservation(@PathVariable("id") Long id, @ModelAttribute("guest") Guest guest) {
+		return "redirect:reservation/list";
 	}
 	
 }

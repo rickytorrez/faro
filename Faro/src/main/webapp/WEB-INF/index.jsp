@@ -12,17 +12,7 @@
 	</head>
 	<body>
 		<h3>Welcome to Faro</h3>
-		<a href="/restaurant/login"><button>Admin</button></a>
-		
-<%-- 		<form action="/guest/${reservation.id}/new" method="POST">
-			<select>
-				<c:forEach items="${reservations}" var="reservation">
-					<option>${reservation.day}, ${reservation.time}</option>
-				</c:forEach>
-			</select>
-			<input type="submit" value="Reserve" />
-		</form> --%>
-		
+		<a href="/restaurant/login"><button>Admin</button></a>	
 		<a href="/reservation/list"><button>Make a reservation!</button></a>
 		
 		

@@ -1,6 +1,7 @@
 package com.ericardo.faro.models;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -8,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 
@@ -48,9 +50,16 @@ public class Reservation {
 	
 	/*************************************** with user ***************************************/
 	
+	@OneToMany(mappedBy="reservation", fetch=FetchType.LAZY)
+	private List<Guest> guests; 	
 	
-	 	
-	
+	public List<Guest> getGuests() {
+		return guests;
+	}
+
+	public void setGuests(List<Guest> guests) {
+		this.guests = guests;
+	}
 
 	/********************************* PERSIST AND UPDATE  **********************************/
 	 	

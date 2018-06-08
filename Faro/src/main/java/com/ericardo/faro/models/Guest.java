@@ -3,8 +3,11 @@ package com.ericardo.faro.models;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 
@@ -33,10 +36,22 @@ public class Guest {
 	@DateTimeFormat(pattern="MM:dd:yyyy HH:mm:ss")
 	private Date updatedAt;
 
-	/************************************* RELATIONSHIPS *************************************/
+	/************************************ RELATIONSHIPS *************************************/
 	 	
-	/*************************************** with user ***************************************/
-	 	
+	/*********************************** with reservation ***********************************/
+	
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="reservation_id")
+	private Reservation reservation;
+	
+	public Reservation getReservation() {
+		return reservation;
+	}
+
+	public void setReservation(Reservation reservation) {
+		this.reservation = reservation;
+	}
+
 	/********************************* PERSIST AND UPDATE  **********************************/
 	 	
 	@PrePersist
