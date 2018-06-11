@@ -123,8 +123,8 @@ public class AdminController {
 		
 			// Gets the date
 			SimpleDateFormat parser = new SimpleDateFormat("yyyy-mm-dd");
-			
 			Date date = parser.parse(day);
+			
 			// Formats it to the app needs
 			SimpleDateFormat formatter = new SimpleDateFormat("EEEE MMMM dd, yyyy");
 			String newDate = formatter.format(date);

@@ -16,6 +16,39 @@
 		<a href="/reservation/list"><button>Make a reservation!</button></a>
 		
 		
+		<hr>
+		<!-- Modal Starts Here -->
+		<!-- 
+			Make a reservation button
+			Pop out a modal to create a new user
+			on submit, display available dates,
+			on submit, display reservation submitted!
+		 -->
 		
+			<p>Pop modal out to create a new guest</p>
+		  	<form:form action="/reservation/guest" method="POST" modelAttribute="guest">
+				<form:select path="reservation">
+					<c:forEach items="${reservations}" var="x">
+						<form:option value="${x.id}">${x.day}, ${x.time}</form:option>
+					</c:forEach>
+				</form:select><br>
+ 			<form:label path="name">Name:
+				<form:input path="name"></form:input>
+				<form:errors path="name"/>
+			</form:label><br>
+			<form:label path="email">E-mail:
+				<form:input path="email"></form:input>
+				<form:errors path="email"/>
+			</form:label><br>
+			<form:label path="phone">Phone:
+				<form:input type="number" path="phone"></form:input>
+				<form:errors path="phone"/>
+			</form:label><br>
+			<form:label path="sizeOfParty">Size of your party:
+				<form:input type="number" path="sizeOfParty"></form:input>
+				<form:errors path="sizeOfParty"/>
+			</form:label><br>
+			<input type="submit" value="Reserve" />
+		</form:form>
 	</body>
 </html>

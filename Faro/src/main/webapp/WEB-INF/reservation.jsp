@@ -11,31 +11,6 @@
 		<title>Reservation Page</title>
 	</head>
 	<body>
-	
- 		<form:form action="/reservation/${reservation.id}/new" method="POST" modelAttribute="guest">
- 		
- 			<c:forEach items="${reservations}" var="reservation">
- 				<form:select path="reservation_id">
- 					<form:option>${reservation.day}, ${reservation.time}</form:option>
-					</c:forEach>
-				</form:select>
- 				<form:label path="name">Name:
-				<form:input path="name"></form:input>
-				<form:errors path="name"/>
-			</form:label><br>
-			<form:label path="email">E-mail:
-				<form:input path="email"></form:input>
-				<form:errors path="email"/>
-			</form:label><br>
-			<form:label path="phone">Phone:
-				<form:input type="number" path="phone"></form:input>
-				<form:errors path="phone"/>
-			</form:label><br>
-			<form:label path="sizeOfParty">Size of your party:
-				<form:input type="number" path="sizeOfParty"></form:input>
-				<form:errors path="sizeOfParty"/>
-			</form:label><br>
-			<input type="submit" value="Reserve" />
-		</form:form>
+		<h4>Reservation Page test</h4>		
 	</body>
 </html>
