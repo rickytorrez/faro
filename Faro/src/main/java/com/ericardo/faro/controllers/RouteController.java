@@ -29,6 +29,11 @@ public class RouteController {
 	@RequestMapping("")
 	public String index(HttpServletRequest _request, HttpSession _session, Model _model, @ModelAttribute("guest") Guest guest, @ModelAttribute("reservation") Reservation reservation) {
 		if(!_aS.isValid(_session)) {
+			
+//			if(reservation.getGuests() == null) {
+//				_model.addAttribute("reservations", _rS.all());
+//			}
+			
 			_model.addAttribute("reservations", _rS.all());
 			System.out.println("landing page on _rC; ");
 			return "index";
