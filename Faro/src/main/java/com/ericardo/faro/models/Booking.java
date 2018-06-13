@@ -23,7 +23,7 @@ public class Booking {
 	
 	private String lastName;
 	
-	private String Email;
+	private String email;
 	
 	private Integer sizeOfParty;
 	
@@ -80,11 +80,11 @@ public class Booking {
 	}
 
 	public String getEmail() {
-		return Email;
+		return email;
 	}
 
 	public void setEmail(String email) {
-		Email = email;
+		this.email = email;
 	}
 
 	public Integer getSizeOfParty() {
