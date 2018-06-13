@@ -10,9 +10,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.ericardo.faro.models.Booking;
-import com.ericardo.faro.models.Guest;
 import com.ericardo.faro.services.AdminService;
-import com.ericardo.faro.services.ReservationService;
 
 @Controller
 @RequestMapping("/**")
@@ -21,13 +19,10 @@ public class RouteController {
 	@Autowired
 	private AdminService _aS;
 	
-	@Autowired
-	private ReservationService _rS;
-	
 	/************ ROUTE THAT TAKES YOU HOME OR DASHBOARD IF ADMIN IS IN SESSION **************/
 
 	@RequestMapping("")
-	public String index(HttpServletRequest _request, HttpSession _session, Model _model, @ModelAttribute("guest") Guest guest, @ModelAttribute("Booking") Booking booking) {
+	public String index(HttpServletRequest _request, HttpSession _session, Model _model, @ModelAttribute("Booking") Booking booking) {
 		if(!_aS.isValid(_session)) {
 			
 			System.out.println("landing page on _rC; ");

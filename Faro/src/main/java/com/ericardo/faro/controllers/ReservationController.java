@@ -22,49 +22,21 @@ public class ReservationController {
 	@Autowired
 	private GuestService _gS;
 	
-	@RequestMapping("/list")
-	public String list(Model _model) {
-		
-		_model.addAttribute("reservations", _rS.all());
-		return "reservation";
-	}
-	
-	@PostMapping("/guest")
-	public String createGuest(@ModelAttribute("guest") Guest guest) {
-		System.out.print("createGuest at _rC");
-		
-		_gS.create(guest);
-		
-		
-		return "redirect:/reservation/list";
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+//	@RequestMapping("/list")
+//	public String list(Model _model) {
+//		
+//		_model.addAttribute("reservations", _rS.all());
+//		return "reservation";
+//	}
+//	
+//	@PostMapping("/guest")
+//	public String createGuest(@ModelAttribute("guest") Guest guest) {
+//		System.out.print("createGuest at _rC");
+//		
+//		_gS.create(guest);
+//		
+//		
+//		return "redirect:/reservation/list";
+//	}	
 	
 }
