@@ -17,7 +17,7 @@
 
 		<hr>
 		
-		<form>
+		<form action="booking/new" method="POST">
 			<label>First Name</label>
 			<input type="text" name="firstName" /><br>
 			<label>Last Name</label>
@@ -29,12 +29,31 @@
 			<label>Phone</label>
 			<input type="number" name="phone" /><br>
 			<label>Date</label>
-			<input type="date" name="date" /><br>
+			<input type="date" name="day" /><br>
 			<label>Time</label>
 			<input type="text" name="time" /><br>
 			<label>Message</label>
 			<input type="text" name="message" /><br>
 			<input type="submit" value="Reserve now!" />
+		</form>
+		
+		<hr>
+		<form action="/restaurant/newReservation" method="POST" >
+		
+			<input type="date" name="day" />
+			
+			<select name="time">
+				<option value="8:00 p.m.">8:00 p.m.</option>
+				<option value="8:15 p.m.">8:15 p.m.</option>
+				<option value="8:30 p.m.">8:30 p.m.</option>	
+				<option value="8:45 p.m.">8:45 p.m.</option>	
+				<option value="9:00 p.m.">9:00 p.m.</option>	
+				<option value="9:15 p.m.">9:15 p.m.</option>	
+				<option value="9:30 p.m.">9:30 p.m.</option>	
+				<option value="9:45 p.m.">9:45 p.m.</option>	
+				<option value="10:00 p.m.">10:00 p.m.</option>	
+			</select>
+			<input type="submit" value="Create!"/>
 		</form>
 		
 

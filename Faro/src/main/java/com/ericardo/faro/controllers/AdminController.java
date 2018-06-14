@@ -114,11 +114,7 @@ public class AdminController {
 	public String createReservation(HttpSession _session, RedirectAttributes _flash,
 			@RequestParam("day") String day, 
 			@RequestParam("time") String time) throws ParseException{
-		if(_session.getAttribute("id") == null) {
-			return "redirect:/";
-		}
 		
-		Admin admin = _aS.find( (Long) _session.getAttribute("id"));
 		Reservation reservation = new Reservation();
 		
 			// Gets the date
@@ -129,10 +125,9 @@ public class AdminController {
 			SimpleDateFormat formatter = new SimpleDateFormat("EEEE MMMM dd, yyyy");
 			String newDate = formatter.format(date);
 			
-			reservation.setAdmin(admin);
 			reservation.setDay(newDate);
 			reservation.setTime(time);
 			_rS.create(reservation);
-			return "redirect:/restaurant/dashboard";
+			return "redirect:/";
 		}
 }

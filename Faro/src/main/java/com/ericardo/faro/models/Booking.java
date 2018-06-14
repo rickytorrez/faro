@@ -29,7 +29,7 @@ public class Booking {
 	
 	private Long phone;
 	
-	private Date date;
+	private Date day;
 	
 	private String time;
 	
@@ -103,12 +103,12 @@ public class Booking {
 		this.phone = phone;
 	}
 
-	public Date getDate() {
-		return date;
+	public Date getDay() {
+		return day;
 	}
 
-	public void setDate(Date date) {
-		this.date = date;
+	public void setDay(Date day) {
+		this.day = day;
 	}
 
 	public String getTime() {
