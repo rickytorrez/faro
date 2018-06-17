@@ -112,11 +112,18 @@ public class AdminController {
 	
 	@PostMapping("/newReservation")
 	public String createReservation(HttpSession _session, RedirectAttributes _flash,
+			@RequestParam("firstName") String firstName, 
+			@RequestParam("lastName") String lastName, 
+			@RequestParam("email") String email, 
+			@RequestParam("sizeOfParty") int sizeOfParty, 
+			@RequestParam("phone") long phone, 
 			@RequestParam("day") String day, 
-			@RequestParam("time") String time) throws ParseException{
+			@RequestParam("time") String time,
+			@RequestParam("message") String message) throws ParseException{
 		
 		Reservation reservation = new Reservation();
 		
+			// DATE PARSER //
 			// Gets the date
 			SimpleDateFormat parser = new SimpleDateFormat("yyyy-mm-dd");
 			Date date = parser.parse(day);
@@ -125,8 +132,14 @@ public class AdminController {
 			SimpleDateFormat formatter = new SimpleDateFormat("EEEE MMMM dd, yyyy");
 			String newDate = formatter.format(date);
 			
+			reservation.setFirstName(firstName);
+			reservation.setLastName(lastName);
+			reservation.setEmail(email);
+			reservation.setSizeOfParty(sizeOfParty);
+			reservation.setPhone(phone);
 			reservation.setDay(newDate);
 			reservation.setTime(time);
+			reservation.setMessage(message);
 			_rS.create(reservation);
 			return "redirect:/";
 		}

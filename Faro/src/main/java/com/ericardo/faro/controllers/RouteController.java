@@ -6,10 +6,8 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.ericardo.faro.models.Booking;
 import com.ericardo.faro.services.AdminService;
 
 @Controller
@@ -22,7 +20,7 @@ public class RouteController {
 	/************ ROUTE THAT TAKES YOU HOME OR DASHBOARD IF ADMIN IS IN SESSION **************/
 
 	@RequestMapping("")
-	public String index(HttpServletRequest _request, HttpSession _session, Model _model, @ModelAttribute("Booking") Booking booking) {
+	public String index(HttpServletRequest _request, HttpSession _session, Model _model) {
 		if(!_aS.isValid(_session)) {
 			
 			System.out.println("landing page on _rC; ");

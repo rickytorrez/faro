@@ -1,15 +1,10 @@
 package com.ericardo.faro.models;
 
 import java.util.Date;
-import java.util.List;
 
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 
@@ -23,43 +18,27 @@ public class Reservation {
 	@GeneratedValue
 	private Long id;
 	
+	private String firstName;
+	
+	private String lastName;
+	
+	private String email;
+	
+	private Integer sizeOfParty;
+	
+	private Long phone;
+	
 	private String day;
 
 	private String time;
+	
+	private String message;
 	
 	@DateTimeFormat(pattern="MM:dd:yyyy HH:mm:ss")
 	private Date createdAt;
 	 	
 	@DateTimeFormat(pattern="MM:dd:yyyy HH:mm:ss")
 	private Date updatedAt;
-
-	/************************************* RELATIONSHIPS *************************************/
-	 	
-	/************************************ with restaurant ************************************/
-	@ManyToOne(fetch=FetchType.LAZY)
-	@JoinColumn(name="admin_id")
-	private Admin admin;
-	
-	public Admin getAdmin() {
-		return admin;
-	}
-
-	public void setAdmin(Admin admin) {
-		this.admin = admin;
-	}
-	
-	/*************************************** with user ***************************************/
-	
-	@OneToMany(mappedBy="reservation", fetch=FetchType.LAZY)
-	private List<Guest> guests; 	
-	
-	public List<Guest> getGuests() {
-		return guests;
-	}
-
-	public void setGuests(List<Guest> guests) {
-		this.guests = guests;
-	}
 
 	/********************************* PERSIST AND UPDATE  **********************************/
 	 	
@@ -82,20 +61,68 @@ public class Reservation {
 		this.id = id;
 	}
 
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public Integer getSizeOfParty() {
+		return sizeOfParty;
+	}
+
+	public void setSizeOfParty(Integer sizeOfParty) {
+		this.sizeOfParty = sizeOfParty;
+	}
+
+	public Long getPhone() {
+		return phone;
+	}
+
+	public void setPhone(Long phone) {
+		this.phone = phone;
+	}
+
 	public String getDay() {
 		return day;
 	}
 
 	public void setDay(String day) {
 		this.day = day;
-	}	
-	
+	}
+
 	public String getTime() {
 		return time;
 	}
 
 	public void setTime(String time) {
 		this.time = time;
+	}
+
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
 	}
 
 	public Date getCreatedAt() {

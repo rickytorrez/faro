@@ -2,13 +2,10 @@ package com.ericardo.faro.models;
 
 
 import java.util.Date;
-import java.util.List;
 
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.validation.constraints.Size;
@@ -39,21 +36,6 @@ public class Admin {
 	@DateTimeFormat(pattern="MM:dd:yyyy HH:mm:ss")
 	private Date updatedAt;
 
-	/************************************* RELATIONSHIPS *************************************/
-	 	
-	/*********************************** with reservation ************************************/
-	
-	@OneToMany(mappedBy="admin", fetch=FetchType.LAZY)
-	private List<Reservation> reservation;
-	
-	public List<Reservation> getReservation() {
-		return reservation;
-	}
-
-	public void setReservation(List<Reservation> reservation) {
-		this.reservation = reservation;
-	}
-	
 	/********************************* PERSIST AND UPDATE  **********************************/
 	 	
 	@PrePersist
