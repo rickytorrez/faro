@@ -22,7 +22,7 @@ public class Message {
 	
 	private String email;
 	
-	private String message;
+	private String content;
 	 	
 	@DateTimeFormat(pattern="MM:dd:yyyy HH:mm:ss")
 	private Date createdAt;
@@ -70,12 +70,12 @@ public class Message {
 		this.email = email;
 	}
 
-	public String getMessage() {
-		return message;
+	public String getContent() {
+		return content;
 	}
 
-	public void setMessage(String message) {
-		this.message = message;
+	public void setContent(String content) {
+		this.content = content;
 	}
 
 	public Date getCreatedAt() {

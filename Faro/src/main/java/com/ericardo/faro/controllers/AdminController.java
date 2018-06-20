@@ -36,7 +36,9 @@ public class AdminController {
 
 	@RequestMapping("/login")
 	public String logAdmin(@ModelAttribute("admin") Admin admin, HttpSession _session) {
+		System.out.println("login RM on _aC; ");
 		_aS.logout(_session);
+		System.out.println("loginAdmin PM on _aC; ");
 		return "adminLogin";
 	}
 
@@ -65,6 +67,7 @@ public class AdminController {
 	public String loginAdmin(@RequestParam("email") String email, @RequestParam("password") String password, HttpSession _session, RedirectAttributes _flash) {
 		if(email.length() <1) {
 			_flash.addFlashAttribute("error", "Email cannot be blank.");
+			System.out.println("loginAdmin PM on _aC before Login ");
 			return "redirect:/restaurant/login";
 		} 
 		
@@ -79,7 +82,7 @@ public class AdminController {
 				return "redirect:/restaurant/dashboard";
 			} else {
 				_flash.addFlashAttribute("error", "Invalid Credentials");
-				
+				System.out.println("loginAdmin PM on _aC; ");
 				return "redirect:/restaurant/login";
 			}
 		}
@@ -90,6 +93,7 @@ public class AdminController {
 	@RequestMapping("/logout")
 	public String logoutAdmin(HttpSession _session) {
 		_session.setAttribute("id", null);
+		System.out.println("logout RM on _aC; ");
 		return "redirect:/restaurant/login";
 	}
 	
@@ -98,14 +102,15 @@ public class AdminController {
 	@RequestMapping("/dashboard")
 	public String adminDashboard(HttpSession _session, Model _model) {
 		if(_session.getAttribute("id") == null) {
+			System.out.println("dashboard RM on _aC before adminDash");
 			return "redirect:/";
 		} 
 		
 		Admin admin = _aS.find( (Long) _session.getAttribute("id"));
 		_model.addAttribute("admin", admin);
 		_model.addAttribute("reservations", _rS.all());
+		System.out.println("dashboard RM on _aC after adminDash");
 		return "adminDashboard";
-		
 	}
 	
 	/********************* METHOD TO CREATE A NEW AVAILABLE RESERVATION  **********************/
@@ -141,6 +146,7 @@ public class AdminController {
 			reservation.setTime(time);
 			reservation.setMessage(message);
 			_rS.create(reservation);
+			System.out.println("newReservation RM on _aC; ");
 			return "redirect:/";
 		}
 }

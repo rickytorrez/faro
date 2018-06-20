@@ -68,5 +68,23 @@
 			<input type="text" name="message" /><br>
 			<input type="submit" value="Create!"/>
 		</form>
+		
+		
+			<form action="/message/new" method="POST">
+           		<p>
+               		<input type="text" placeholder="Name" required name="name">
+              	</p>
+              	<p>
+                	<input type="text" placeholder="Email" required name="email">
+               	</p>
+               	<p>
+              		<input type="text" placeholder="Message" required name="content">
+              	</p>
+              	<p>
+               		<button class="w3-button w3-black" type="submit">
+               			<i class="fa fa-paper-plane"></i> SEND MESSAGE
+                  	</button>
+               	</p>
+         	</form>
 	</body>
 </html>

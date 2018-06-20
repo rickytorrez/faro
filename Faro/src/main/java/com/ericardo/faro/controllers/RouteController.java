@@ -21,9 +21,9 @@ public class RouteController {
 
 	@RequestMapping("")
 	public String index(HttpServletRequest _request, HttpSession _session, Model _model) {
-		if(!_aS.isValid(_session)) {
+		if(_session.getAttribute("id") == null) {
 			
-			System.out.println("landing page on _rC; ");
+			System.out.println("landing page on _rC1 ");
 			return "index";
 		} else {
 			return "redirect:/restaurant/dashboard";
