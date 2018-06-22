@@ -4,6 +4,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 	<head>
@@ -463,18 +464,18 @@
 					
 					<!-- form -->
 		          	<div class="col-md-7 mb-5 site-animate">
-		            	<form action="" method="post">
+		            	<form action="/message/new" method="POST">
 		              		<div class="form-group">
-		                		<label for="name" class="sr-only">Name</label>
-		                		<input type="text" class="form-control" id="name" placeholder="Name">
+		                		<label class="sr-only">Name</label>
+		                		<input type="text" class="form-control" placeholder="Name" required name="name">
 		              		</div>
 		              		<div class="form-group">
-				                <label for="email" class="sr-only">Email</label>
-				                <input type="text" class="form-control" id="email" placeholder="Email">
+				                <label class="sr-only">Email</label>
+				                <input type="text" class="form-control" placeholder="Email" required name="email">
 		              		</div>
 		              		<div class="form-group">
-				                <label for="message" class="sr-only">Message</label>
-				                <textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Write your message"></textarea>
+				                <label class="sr-only">Message</label>
+				                <textarea name="content" cols="30" rows="10" class="form-control" placeholder="Write your message" required></textarea>
 		              		</div>
 		              		<div class="form-group">
 		                		<input type="submit" class="btn btn-primary btn-lg" value="Send Message">
@@ -541,13 +542,13 @@
           			
           			<!-- copy -->
 	          		<div class="col-md-12 text-center">
-	            		<p>&copy; Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Powered by <a href="https://ertorrez.com" target="_blank">E.Ricardo Torrez</a></p>
+	            		<p><a href="/restaurant/login" target="_blank">Admin Login</a> | &copy; Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Powered by <a href="https://ertorrez.com" target="_blank">E.Ricardo Torrez</a></p>
 	          		</div>
         		</div>
       		</div>
     	</footer>
 
-    	<!-- reservstion modal begins-->
+    	<!-- reservation modal begins-->
     	<div class="modal fade" id="reservationModal" tabindex="-1" role="dialog" aria-labelledby="reservationModalLabel" aria-hidden="true">
       		<div class="modal-dialog modal-lg" role="document">
         		<div class="modal-content">
@@ -645,136 +646,32 @@
 		<!-- scripts -->
 		<!-- jquery -->
 		<script src="<c:url value="/resources/faro/js/jquery.min.js" />"></script>
-		
+		<!-- popper -->
 		<script src="<c:url value="/resources/faro/js/popper.min.js" />"></script>
-
+		<!-- bootstrap -->
 		<script src="<c:url value="/resources/faro/js/bootstrap.min.js" />"></script>
-
+		<!-- easing -->
 		<script src="<c:url value="/resources/faro/js/jquery.easing.1.3.js" />"></script>
-		
+		<!-- waypoint -->
 		<script src="<c:url value="/resources/faro/js/jquery.waypoints.min.js" />"></script>
-		
+		<!-- carousel -->
 		<script src="<c:url value="/resources/faro/js/owl.carousel.min.js" />"></script>
-		
+		<!-- pop up -->
 		<script src="<c:url value="/resources/faro/js/jquery.magnific-popup.min.js" />"></script>
-		
+		<!-- datepicker -->
 		<script src="<c:url value="/resources/faro/js/bootstrap-datepicker.js" />"></script>
-		
+		<!-- timepicker -->
 		<script src="<c:url value="/resources/faro/js/jquery.timepicker.min.js" />"></script>
-		
+		<!-- animate number -->
 		<script src="<c:url value="/resources/faro/js/jquery.animateNumber.min.js" />"></script>
-		
+		<!-- google api -->
     	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJ-UwG2QhQze8fgx2B4KPAplCRT670Leo&sensor=false"></script>
-    	
+    	<!-- google map controller -->
     	<script src="<c:url value="/resources/faro/js/google-map.js" />"></script>
-    	
+    	<!-- main jquery -->
     	<script src="<c:url value="/resources/faro/js/main.js" />"></script>
-
+		<!-- scripts end -->
+		
 	</body>
 	
-</html>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		
-		
-		
-			<form action="/message/new" method="POST">
-           		<p>
-               		<input type="text" placeholder="Name" required name="name">
-              	</p>
-              	<p>
-                	<input type="text" placeholder="Email" required name="email">
-               	</p>
-               	<p>
-              		<input type="text" placeholder="Message" required name="content">
-              	</p>
-              	<p>
-               		<button class="w3-button w3-black" type="submit">
-               			<i class="fa fa-paper-plane"></i> SEND MESSAGE
-                  	</button>
-               	</p>
-         	</form>
-	</body>
 </html>
