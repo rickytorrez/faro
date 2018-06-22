@@ -35,10 +35,11 @@
     </head>
     
     <body data-spy="scroll" data-target="#site-navbar" data-offset="200">
+    
     	<!-- nav begins-->
     	<nav class="navbar navbar-expand-lg navbar-dark site_navbar bg-dark site-navbar-light" id="site-navbar">
       		<div class="container">
-        		<a class="navbar-brand" href="index.html">FARO</a>
+        		<a class="navbar-brand" href="/">FARO</a>
         		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#site-nav" aria-controls="site-nav" aria-expanded="false" aria-label="Toggle navigation">
           			<span class="oi oi-menu"></span> Menu
         		</button>
@@ -553,7 +554,7 @@
           			<div class="modal-body">
             			<div class="row">
               				<div class="col-lg-12">
-                				<div class="bg-image" style="background-image: url(images/reservation_1.jpg);"></div>
+                				<div class="bg-image" style="background-image: url(resources/faro/img/reservation_1.jpg);"></div>
               				</div>
               				<div class="col-lg-12 p-5">
                 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -562,56 +563,65 @@
                 				<h1 class="mb-4">Reserve A Table</h1>  
                 				
                 				<!-- form -->
-				                <form action="#" method="post">
+				                <form action="/restaurant/newReservation" method="POST" >
 				                  	<div class="row">
 				                    	<div class="col-md-6 form-group">
-					                      	<label for="m_fname">First Name</label>
-					                      	<input type="text" class="form-control" id="m_fname">
+					                      	<label>First Name</label>
+					                      	<input type="text" class="form-control" name="firstName">
 				                    	</div>
 				                    	<div class="col-md-6 form-group">
-				                      		<label for="m_lname">Last Name</label>
-				                      		<input type="text" class="form-control" id="m_lname">
+				                      		<label>Last Name</label>
+				                      		<input type="text" class="form-control" name="lastName">
 				                    	</div>
 				                  	</div>
 				                  	
 				                  	<div class="row">
 				                    	<div class="col-md-12 form-group">
-				                      		<label for="m_email">Email</label>
-				                      		<input type="email" class="form-control" id="m_email">
+				                      		<label>Email</label>
+				                      		<input type="email" class="form-control" name="email" >
 				                    	</div>
 				                  	</div>
 				                  	
 				                  	<div class="row">
 				                    	<div class="col-md-6 form-group">
-				                      		<label for="m_people">How Many People</label>
-				                      		<select name="" id="m_people" class="form-control">
+				                      		<label>How Many People</label>
+				                      		<select name="sizeOfParty"  class="form-control">
 						                    	<option value="1">1 People</option>
 						                  		<option value="2">2 People</option>
 						                        <option value="3">3 People</option>
-						                        <option value="4+">4+ People</option>
+						                        <option value="4">4+ People</option>
 				                      		</select>
 				                    	</div>
 				                    	<div class="col-md-6 form-group">
-				                      		<label for="m_phone">Phone</label>
-				                      		<input type="text" class="form-control" id="m_phone">
+				                      		<label>Phone</label>
+				                      		<input type="text" class="form-control" name="phone" >
 				                    	</div>
 				                  	</div>
 				                  	
 				                  	<div class="row">
 				                    	<div class="col-md-6 form-group">
-				                      		<label for="m_date">Date</label>
-				                      		<input type="text" class="form-control" id="m_date">
+				                      		<label>Date</label>
+				                      		<input type="date" class="form-control" name="day" >
 				                   	 	</div>
 				                    	<div class="col-md-6 form-group">
-				                      		<label for="m_time">Time</label>
-				                      		<input type="text" class="form-control" id="m_time">
+				                      		<label>Time</label>
+				                      			<select name="time" class="form-control">
+													<option value="8:00 p.m.">8:00 p.m.</option>
+													<option value="8:15 p.m.">8:15 p.m.</option>
+													<option value="8:30 p.m.">8:30 p.m.</option>	
+													<option value="8:45 p.m.">8:45 p.m.</option>	
+													<option value="9:00 p.m.">9:00 p.m.</option>	
+													<option value="9:15 p.m.">9:15 p.m.</option>	
+													<option value="9:30 p.m.">9:30 p.m.</option>	
+													<option value="9:45 p.m.">9:45 p.m.</option>	
+												</select>
 				                    	</div>
 				                  	</div>
 				                  	
 				                  	<div class="row">
 				                    	<div class="col-md-12 form-group">
-				                      		<label for="m_message">Message</label>
-				                      		<textarea class="form-control" id="m_message" cols="30" rows="7"></textarea>
+				                      		<label>Message</label>
+				                      		<textarea class="form-control" name="message" cols="30" rows="7"></textarea>
 				                    	</div>
 				                  	</div>
 				                  
@@ -747,41 +757,7 @@
 	
 	
 	
-	<body>
-		<h3>Welcome to Faro</h3>
-		<a href="/restaurant/login"><button>Admin</button></a>	
-
-		<hr>
-		<form action="/restaurant/newReservation" method="POST" >
 		
-			<label>First Name</label>
-			<input type="text" name="firstName" /><br>
-			<label>Last Name</label>
-			<input type="text" name="lastName" /><br>
-			<label>Email</label>
-			<input type="text" name="email" /><br>
-			<label>How Many People</label>
-			<input type="number" name="sizeOfParty" /><br>
-			<label>Phone</label>
-			<input type="number" name="phone" /><br>
-			<label>Date</label>		
-			<input type="date" name="day" /><br>
-			<label>Time</label>
-			<select name="time">
-				<option value="8:00 p.m.">8:00 p.m.</option>
-				<option value="8:15 p.m.">8:15 p.m.</option>
-				<option value="8:30 p.m.">8:30 p.m.</option>	
-				<option value="8:45 p.m.">8:45 p.m.</option>	
-				<option value="9:00 p.m.">9:00 p.m.</option>	
-				<option value="9:15 p.m.">9:15 p.m.</option>	
-				<option value="9:30 p.m.">9:30 p.m.</option>	
-				<option value="9:45 p.m.">9:45 p.m.</option>	
-				<option value="10:00 p.m.">10:00 p.m.</option>	
-			</select><br>
-			<label>Message</label>
-			<input type="text" name="message" /><br>
-			<input type="submit" value="Create!"/>
-		</form>
 		
 		
 			<form action="/message/new" method="POST">
