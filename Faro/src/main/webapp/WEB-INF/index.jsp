@@ -33,6 +33,8 @@
     	<link href="<c:url value="/resources/faro/css/icomoon.css" />" rel="stylesheet" >
     	<!-- style -->
     	<link href="<c:url value="/resources/faro/css/style.css" />" rel="stylesheet" >
+    	<!-- favicon -->
+    	<link rel="shortcut icon" type="image/png" href="resources/faro/img/faro_favico.png"/>
     </head>
     
     <body data-spy="scroll" data-target="#site-navbar" data-offset="200">
@@ -65,7 +67,7 @@
           			<div class="col-md-12">
             			<h1 class="site-heading site-animate mb-3">Welcome To Faro</h1>
             			<h2 class="h5 site-subheading mb-5 site-animate">Visit us for our unique mediterranean cuisine &amp; fresh drinks.</h2>    
-            				<p><a href="https://colorlib.com/" target="_blank" class="btn btn-outline-white btn-lg site-animate" data-toggle="modal" data-target="#reservationModal">Reserve a Table</a></p>
+            				<p><a href="ertorrez.com" target="_blank" class="btn btn-outline-white btn-lg site-animate" data-toggle="modal" data-target="#reservationModal">Reserve a Table</a></p>
           			</div>
         		</div>
       		</div>
@@ -533,16 +535,15 @@
            			<div class="col-md-12 text-center">
             			<div class="site-footer-widget mb-4">
               				<ul class="site-footer-social list-unstyled ">
-				                <li class="site-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-				                <li class="site-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-				                <li class="site-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+				                <li class="site-animate"><a href="https://www.facebook.com/Faro-Mediterranean-Cusine-657158667962227"><span class="icon-facebook"></span></a></li>
+				                <li class="site-animate"><a href="https://www.instagram.com/farocuisine"><span class="icon-instagram"></span></a></li>
               				</ul>
             			</div>
           			</div>
           			
           			<!-- copy -->
 	          		<div class="col-md-12 text-center">
-	            		<p><a href="/restaurant/login" target="_blank">Admin Login</a> | &copy; Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Powered by <a href="https://ertorrez.com" target="_blank">E.Ricardo Torrez</a></p>
+	            		<p><a href="/restaurant/login">Admin Login</a> | &copy; Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Powered by <a href="https://ertorrez.com" target="_blank">E.Ricardo Torrez</a></p>
 	          		</div>
         		</div>
       		</div>
@@ -638,7 +639,7 @@
         		</div>
       		</div>
     	</div>
-    	<!-- registration ends -->
+    	<!-- reservation ends -->
 
     	<!-- loader -->
  		<div id="site-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
