@@ -24,7 +24,7 @@ import com.ericardo.faro.services.MessageService;
 import com.ericardo.faro.services.ReservationService;
 
 @Controller
-@RequestMapping("/restaurant/")
+@RequestMapping("/restaurant")
 public class AdminController {
 	
 	@Autowired
