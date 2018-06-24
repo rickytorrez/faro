@@ -14,27 +14,27 @@
     	<!-- raleway font -->
     	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700|Raleway" rel="stylesheet">
     	<!-- bootstrap -->
-    	<link href="<c:url value="/resources/faro/css/bootstrap.min.css" />" rel="stylesheet" >
+    	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
     	<!-- open-iconic-bootstrap -->
-    	<link href="<c:url value="/resources/faro/css/open-iconic-bootstrap.min.css" />" rel="stylesheet" >
+    	<link rel="stylesheet" type="text/css" href="/css/open-iconic-bootstrap.min.css">
     	<!-- animate css -->
-    	<link href="<c:url value="/resources/faro/css/animate.css" />" rel="stylesheet" >
+    	<link rel="stylesheet" type="text/css" href="/css/animate.css">
     	<!-- owl caroul -->
-    	<link href="<c:url value="/resources/faro/css/owl.carousel.min.css" />" rel="stylesheet" >
+    	<link rel="stylesheet" type="text/css" href="/css/owl.carousel.min.css">
     	<!-- owl theme -->
-    	<link href="<c:url value="/resources/faro/css/owl.theme.default.min.css" />" rel="stylesheet" >
+   		<link rel="stylesheet" type="text/css" href="/css/owl.theme.default.min.css">
     	<!-- magnific -->
-    	<link href="<c:url value="/resources/faro/css/magnific-popup.css" />" rel="stylesheet" >
+    	<link rel="stylesheet" type="text/css" href="/css/magnific-popup.css">
     	<!-- datepicker -->
-    	<link href="<c:url value="/resources/faro/css/bootstrap-datepicker.css" />" rel="stylesheet" >
+    	<link rel="stylesheet" type="text/css" href="/css/bootstrap-datepicker.css">
     	<!-- timepicker -->
-    	<link href="<c:url value="/resources/faro/css/jquery.timepicker.css" />" rel="stylesheet" >
+    	<link rel="stylesheet" type="text/css" href="/css/jquery.timepicker.css">
     	<!-- icomoon -->
-    	<link href="<c:url value="/resources/faro/css/icomoon.css" />" rel="stylesheet" >
+    	<link rel="stylesheet" type="text/css" href="/css/icomoon.css">
     	<!-- style -->
-    	<link href="<c:url value="/resources/faro/css/style.css" />" rel="stylesheet" >
+    	<link rel="stylesheet" type="text/css" href="/css/style.css">
     	<!-- favicon -->
-    	<link rel="shortcut icon" type="image/png" href="resources/faro/img/faro_favico.png"/>
+    	<link rel="shortcut icon" type="image/png" href="/img/faro_favico.png"/>
     </head>
     
     <body data-spy="scroll" data-target="#site-navbar" data-offset="200">
@@ -51,7 +51,7 @@
 	          		<ul class="navbar-nav ml-auto">
 	            		<li class="nav-item active"><a href="#section-home" class="nav-link">Home</a></li>
 	            		<li class="nav-item"><a href="#section-about" class="nav-link">About</a></li>
-	            		<li class="nav-item"><a href="#section-offer" class="nav-link">Offer</a></li>
+	            		<li class="nav-item"><a href="#section-offer" class="nav-link">Seasonal</a></li>
 	            		<li class="nav-item"><a href="#section-menu" class="nav-link">Menu</a></li>
 	            		<li class="nav-item"><a href="#section-contact" class="nav-link">Contact</a></li>
 	          		</ul>
@@ -61,7 +61,7 @@
     	<!-- nav ends -->
 
     	<!-- landing image begins -->
-    	<section class="site-cover" style="background-image: url(/resources/faro/img/faro_bg.jpg);" id="section-home">
+    	<section class="site-cover" style="background-image: url(/img/faro_bg.jpg);" id="section-home">
       		<div class="container">
         		<div class="row align-items-center justify-content-center text-center site-vh-100">
           			<div class="col-md-12">
@@ -87,7 +87,7 @@
           			</div>
           			<div class="col-md-1"></div>
           			<div class="col-md-6 site-animate img" data-animate-effect="fadeInRight">
-            			<img src="/resources/faro/img/chef_pepin.jpg" alt="Chef Pepin" class="img-fluid">
+            			<img src="img/chef_pepin.jpg" alt="Chef Pepin" class="img-fluid">
           			</div>
         		</div>
       		</div>
@@ -112,7 +112,7 @@
             			<div class="owl-carousel site-owl">
               				<div class="item">
                 				<div class="media d-block mb-4 text-center site-media site-animate border-0">
-                  					<img src="/resources/faro/img/summer_2.jpg" alt="Lamb Shakshuka" class="img-fluid">
+                  					<img src="/img/summer_2.jpg" alt="Lamb Shakshuka" class="img-fluid">
                   					<div class="media-body p-md-5 p-4">
                     					<h5 class="text-primary">$19.50</h5>
 						              	<h5 class="mt-0 h4">Lamb Shakshuka</h5>
@@ -124,7 +124,7 @@
               				
               				<div class="item">
                 				<div class="media d-block mb-4 text-center site-media site-animate border-0">
-                    				<img src="/resources/faro/img/summer_1.jpg" alt="Baba Ghanoush" class="img-fluid">
+                    				<img src="/img/summer_1.jpg" alt="Baba Ghanoush" class="img-fluid">
                     				<div class="media-body p-md-5 p-4">       
 					                    <h5 class="text-primary">$9.50</h5>
 					                    <h5 class="mt-0 h4">Baba Ghanoush</h5>
@@ -135,7 +135,7 @@
               
               				<div class="item">
                 				<div class="media d-block mb-4 text-center site-media site-animate border-0">
-                  					<img src="/resources/faro/img/summer_3.jpg" alt="Greek Disco Fries" class="img-fluid">
+                  					<img src="/img/summer_3.jpg" alt="Greek Disco Fries" class="img-fluid">
                   					<div class="media-body p-md-5 p-4">
 					                    <h5 class="text-primary">$11.50</h5>
 					                    <h5 class="mt-0 h4">Greek Disco Fries</h5>
@@ -147,7 +147,7 @@
 
               				<div class="item">
                 				<div class="media d-block mb-4 text-center site-media site-animate border-0">
-					          		<img src="/resources/faro/img/summer_4.jpg" alt="Put an Egg on It" class="img-fluid">
+					          		<img src="/img/summer_4.jpg" alt="Put an Egg on It" class="img-fluid">
 					            	<div class="media-body p-md-5 p-4">
                     					<h5 class="text-primary">$12.50</h5>
                     					<h5 class="mt-0 h4">Put an Egg on it</h5>
@@ -159,7 +159,7 @@
 
               				<div class="item">
                 				<div class="media d-block mb-4 text-center site-media site-animate border-0">
-                  					<img src="/resources/faro/img/summer_5.jpg" alt="Fried Chicken" class="img-fluid">
+                  					<img src="/img/summer_5.jpg" alt="Fried Chicken" class="img-fluid">
                   					<div class="media-body p-md-5 p-4">
                     					<h5 class="text-primary">$14.50</h5>
                     					<h5 class="mt-0 h4">Fried Chicken</h5>
@@ -171,7 +171,7 @@
               
               				<div class="item">
                 				<div class="media d-block mb-4 text-center site-media site-animate border-0">
-                  					<img src="/resources/faro/img/summer_6.jpg" alt="Blacked Cod" class="img-fluid">
+                  					<img src="/img/summer_6.jpg" alt="Blacked Cod" class="img-fluid">
                   					<div class="media-body p-md-5 p-4">
                     					<h5 class="text-primary">$23.50</h5>
                     					<h5 class="mt-0 h4">Blacked Cod</h5>
@@ -183,7 +183,7 @@
 
               				<div class="item">
                 				<div class="media d-block mb-4 text-center site-media site-animate border-0">
-                  					<img src="/resources/faro/img/summer_7.jpg" alt="Spanakopita" class="img-fluid">
+                  					<img src="/img/summer_7.jpg" alt="Spanakopita" class="img-fluid">
                   					<div class="media-body p-md-5 p-4">
 					                    <h5 class="text-primary">$22.50</h5>
 					                    <h5 class="mt-0 h4">Spanakopita</h5>
@@ -195,7 +195,7 @@
 
               				<div class="item">
                 				<div class="media d-block mb-4 text-center site-media site-animate border-0">
-                  					<img src="/resources/faro/img/summer_8.jpg" alt="Sea Scallops" class="img-fluid">
+                  					<img src="/img/summer_8.jpg" alt="Sea Scallops" class="img-fluid">
                   					<div class="media-body p-md-5 p-4">
                     					<h5 class="text-primary">$19.50</h5>
                     					<h5 class="mt-0 h4">Sea Scallops</h5>
@@ -207,7 +207,7 @@
               
               				<div class="item">
                 				<div class="media d-block mb-4 text-center site-media site-animate border-0">
-                  					<img src="/resources/faro/img/summer_9.jpg" alt="Lamb Eggplant" class="img-fluid">
+                  					<img src="/img/summer_9.jpg" alt="Lamb Eggplant" class="img-fluid">
                   					<div class="media-body p-md-5 p-4">
 					                    <h5 class="text-primary">$17.00</h5>
 					                    <h5 class="mt-0 h4">Lamb Eggplant</h5>
@@ -258,7 +258,7 @@
 		                		<div class="row">
 		                  			<div class="col-md-6 site-animate">
 		                    			<div class="media menu-item">
-		                      				<img class="mr-3" src="/resources/faro/img/menu_1.jpg" class="img-fluid" alt="Hünkãr Beğendi">
+		                      				<img class="mr-3" src="/img/menu_1.jpg" class="img-fluid" alt="Hünkãr Beğendi">
 		                      					<div class="media-body">
 		                        					<h5 class="mt-0">Hünkãr Beğendi</h5>
 		                        					<p>Traditional Turkish-braised lamb shank<br>Eggplant-kefalograviera puree</p>
@@ -267,7 +267,7 @@
 		                    			</div>
 
                     					<div class="media menu-item">
-                      						<img class="mr-3" src="/resources/faro/img/menu_2.jpg" class="img-fluid" alt="Kofte Burger">
+                      						<img class="mr-3" src="/img/menu_2.jpg" class="img-fluid" alt="Kofte Burger">
                       							<div class="media-body">
                         							<h5 class="mt-0">Kofte Burger</h5>
 							                        <p>Kobe Beef<br> Smoked yogurt tzatzik</p>
@@ -276,7 +276,7 @@
                     					</div>
 
                     					<div class="media menu-item">
-					                   		<img class="mr-3" src="/resources/faro/img/menu_3.jpg" class="img-fluid" alt="Hommus Ma Lahm">
+					                   		<img class="mr-3" src="/img/menu_3.jpg" class="img-fluid" alt="Hommus Ma Lahm">
 					                      		<div class="media-body">
 					                        		<h5 class="mt-0">Hommus Ma Lahm</h5>
 					                        		<p>Hommus Ma Lahm<br>House-pickled vegetables</p>
@@ -287,7 +287,7 @@
                   					
                   					<div class="col-md-6 site-animate">
 				                    	<div class="media menu-item">
-				                      		<img class="mr-3" src="/resources/faro/img/menu_4.jpg" class="img-fluid" alt="Blacked Cod">
+				                      		<img class="mr-3" src="/img/menu_4.jpg" class="img-fluid" alt="Blacked Cod">
 				                      			<div class="media-body">
 				                        			<h5 class="mt-0">Blacked Cod</h5>
 				                        			<p>Blackened Cod<br>Apple Cider Vinegar</br></p>
@@ -296,7 +296,7 @@
 				                    	</div>
 
                     					<div class="media menu-item">
-                      						<img class="mr-3" src="/resources/faro/img/menu_5.jpg" class="img-fluid" alt="Sea Scallops">
+                      						<img class="mr-3" src="/img/menu_5.jpg" class="img-fluid" alt="Sea Scallops">
                       							<div class="media-body">
 					                        		<h5 class="mt-0">Sea Scallops</h5>
 					                        		<p>Dill Yogurt<br>Sesame Rose Spice</p>
@@ -305,7 +305,7 @@
 					                    </div>
 
                     					<div class="media menu-item">
-					                   		<img class="mr-3" src="/resources/faro/img/menu_6.jpg" class="img-fluid" alt="Bantijan Bil Laban">
+					                   		<img class="mr-3" src="/img/menu_6.jpg" class="img-fluid" alt="Bantijan Bil Laban">
 					                      		<div class="media-body">
 					                        		<h5 class="mt-0">Bantijan Bil Laban</h5>
 					                        		<p>Crispy eggplant<br>Roasted garlic-yogurt</p>
@@ -322,7 +322,7 @@
 			                  		<div class="col-md-6 site-animate">
 			                  		
 			                    		<div class="media menu-item">
-			                      			<img class="mr-3" src="/resources/faro/img/menu_7.jpg" class="img-fluid" alt="Lamb Shakshuka">
+			                      			<img class="mr-3" src="/img/menu_7.jpg" class="img-fluid" alt="Lamb Shakshuka">
 			                      			<div class="media-body">
 			                        			<h5 class="mt-0">Lamb Shakshuka</h5>
 			                        			<p>Lamb<br>Cherry Tomato Sauce</p>
@@ -331,7 +331,7 @@
 			                    		</div>
 
                     				<div class="media menu-item">
-                      					<img class="mr-3" src="/resources/faro/img/menu_8.jpg" class="img-fluid" alt="Baba Ghanoush">
+                      					<img class="mr-3" src="/img/menu_8.jpg" class="img-fluid" alt="Baba Ghanoush">
                       						<div class="media-body">
 					                   			<h5 class="mt-0">Baba Ghanoush</h5>
 					                        	<p>Eggplant<br>Pita Bread</p>
@@ -340,7 +340,7 @@
                     				</div>
 
                     				<div class="media menu-item">
-				                      	<img class="mr-3" src="/resources/faro/img/menu_9.jpg" class="img-fluid" alt="Lamb Eggplant">
+				                      	<img class="mr-3" src="/img/menu_9.jpg" class="img-fluid" alt="Lamb Eggplant">
 				                      		<div class="media-body">
 				                        		<h5 class="mt-0">Lamb Eggplant</h5>
 				                        		<p>Roasted Egg Plant<br>Ground Jamison Lamb</p>
@@ -351,7 +351,7 @@
                   				
                   				<div class="col-md-6 site-animate">
                     				<div class="media menu-item">
-				                    	<img class="mr-3" src="/resources/faro/img/menu_10.jpg" class="img-fluid" alt="Fattoush">
+				                    	<img class="mr-3" src="/img/menu_10.jpg" class="img-fluid" alt="Fattoush">
 				                      		<div class="media-body">
 						                        <h5 class="mt-0">Fattoush</h5>
 						                        <p>Vegetable Assortment<br>Pomegranate Vinegar dressing</p>
@@ -360,7 +360,7 @@
 				                	</div>
 
 				                    <div class="media menu-item">
-				                      	<img class="mr-3" src="/resources/faro/img/menu_11.jpg" class="img-fluid" alt="Greek Disco Fries">
+				                      	<img class="mr-3" src="/img/menu_11.jpg" class="img-fluid" alt="Greek Disco Fries">
 				                      		<div class="media-body">
 						                        <h5 class="mt-0">Greek Disco Fries</h5>
 						                        <p>Alexia Fries<br>Gruyere Cheese</p>
@@ -369,7 +369,7 @@
 				                	</div>
 
                     				<div class="media menu-item">
-                      					<img class="mr-3" src="/resources/faro/img/menu_12.jpg" class="img-fluid" alt="Fried Chicken">
+                      					<img class="mr-3" src="/img/menu_12.jpg" class="img-fluid" alt="Fried Chicken">
                       						<div class="media-body">
 						                        <h5 class="mt-0">Fried Chicken</h5>
 						                        <p>Fried Chicken<br>Lemon and Cucumber Sauce</p>
@@ -386,7 +386,7 @@
 		                  		<div class="col-md-6 site-animate">
 
 				                    <div class="media menu-item">
-				                      	<img class="mr-3" src="/resources/faro/img/cocktail_1.jpg" class="img-fluid" alt="Reborn">
+				                      	<img class="mr-3" src="/img/cocktail_1.jpg" class="img-fluid" alt="Reborn">
 				                      		<div class="media-body">
 						                        <h5 class="mt-0">Reborn</h5>
 						                        <p>Tsipouro<br>Aquafaba<br>Cardamom Ashes</p>
@@ -395,7 +395,7 @@
 				                  	</div>
 
                     				<div class="media menu-item">
-                      					<img class="mr-3" src="/resources/faro/img/cocktail_2.jpg" class="img-fluid" alt="Greek Cosmo">
+                      					<img class="mr-3" src="/img/cocktail_2.jpg" class="img-fluid" alt="Greek Cosmo">
 					                      	<div class="media-body">
 					                        	<h5 class="mt-0">Greek Cosmo</h5>
 					                        	<p>Haraki Tsikoudia<br>Cranberry Juice<br>Lime Juice</p>
@@ -404,7 +404,7 @@
 					             	</div>
 
 				                    <div class="media menu-item">
-				                      	<img class="mr-3" src="/resources/faro/img/cocktail_3.jpg" class="img-fluid" alt="Truffle Ash">
+				                      	<img class="mr-3" src="/img/cocktail_3.jpg" class="img-fluid" alt="Truffle Ash">
 				                      		<div class="media-body">
 				                        		<h5 class="mt-0">Truffle Ash</h5>
 				                        		<p>Haraki Tsikoudi<br>Pineapple Juice<br>Truffle Dash</p>
@@ -415,7 +415,7 @@
                   
 	                  			<div class="col-md-6 site-animate">
 	                    			<div class="media menu-item">
-	                      				<img class="mr-3" src="/resources/faro/img/cocktail_4.jpg" class="img-fluid" alt="Sidecar">
+	                      				<img class="mr-3" src="/img/cocktail_4.jpg" class="img-fluid" alt="Sidecar">
 				                      		<div class="media-body">
 						                        <h5 class="mt-0">Sidecar</h5>
 						                        <p>Metaxa 7 Brandy<br>Lemon Juice<br>Triple sec</p>
@@ -424,7 +424,7 @@
 	                    			</div>
 
 		                    		<div class="media menu-item">
-				                      	<img class="mr-3" src="/resources/faro/img/cocktail_5.jpg" class="img-fluid" alt="Spiced Orchard">
+				                      	<img class="mr-3" src="/img/cocktail_5.jpg" class="img-fluid" alt="Spiced Orchard">
 				                      		<div class="media-body">
 				                        		<h5 class="mt-0">Spiced Orchard</h5>
 				                        		<p>Royal Sea Vodka<br>Cinnamon<br>Apricot</p>
@@ -433,7 +433,7 @@
 				                    </div>
 
 		                    		<div class="media menu-item">
-		                      			<img class="mr-3" src="/resources/faro/img/cocktail_6.jpg" class="img-fluid" alt="New Fashioned">
+		                      			<img class="mr-3" src="/img/cocktail_6.jpg" class="img-fluid" alt="New Fashioned">
 		                      				<div class="media-body">
 						                        <h5 class="mt-0">New Fashioned</h5>
 						                        <p>Connemara Single Malt<br>Angostura Bitters<br>House Brown Syrup</p>
@@ -488,7 +488,7 @@
 		          	<!-- contact info -->
           			<div class="col-md-1"></div>
 			        	<div class="col-md-4 site-animate">
-			            	<p><img src="/resources/faro/img/chef_pepin.jpg" alt="" class="img-fluid"></p>
+			            	<p><img src="/img/chef_pepin.jpg" alt="" class="img-fluid"></p>
 			            	<p class="text-black">
 				              	Address: <br> 4781 Lee Hwy, Falls Church Virginia <br> 22042 United States <br> <br>
 				              	Phone: <br> 703 786 7818 <br> <br>
@@ -556,7 +556,7 @@
           			<div class="modal-body">
             			<div class="row">
               				<div class="col-lg-12">
-                				<div class="bg-image" style="background-image: url(resources/faro/img/reservation_1.jpg);"></div>
+                				<div class="bg-image" style="background-image: url(/img/reservation_1.jpg);"></div>
               				</div>
               				<div class="col-lg-12 p-5">
                 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -642,35 +642,35 @@
     	<!-- reservation ends -->
 
     	<!-- loader -->
- 		<div id="site-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-		
+		<div id="site-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+ 	
 		<!-- scripts -->
 		<!-- jquery -->
-		<script src="<c:url value="/resources/faro/js/jquery.min.js" />"></script>
+		<script type="text/javascript" src="/js/jquery.min.js"></script>
 		<!-- popper -->
-		<script src="<c:url value="/resources/faro/js/popper.min.js" />"></script>
+		<script type="text/javascript" src="/js/popper.min.js"></script>
 		<!-- bootstrap -->
-		<script src="<c:url value="/resources/faro/js/bootstrap.min.js" />"></script>
+		<script type="text/javascript" src="/js/bootstrap.min.js"></script>
 		<!-- easing -->
-		<script src="<c:url value="/resources/faro/js/jquery.easing.1.3.js" />"></script>
+		<script type="text/javascript" src="/js/jquery.easing.1.3.js"></script>
 		<!-- waypoint -->
-		<script src="<c:url value="/resources/faro/js/jquery.waypoints.min.js" />"></script>
+		<script type="text/javascript" src="/js/jquery.waypoints.min.js"></script>
 		<!-- carousel -->
-		<script src="<c:url value="/resources/faro/js/owl.carousel.min.js" />"></script>
+		<script type="text/javascript" src="/js/owl.carousel.min.js"></script>
 		<!-- pop up -->
-		<script src="<c:url value="/resources/faro/js/jquery.magnific-popup.min.js" />"></script>
+		<script type="text/javascript" src="/js/jquery.magnific-popup.min.js"></script>
 		<!-- datepicker -->
-		<script src="<c:url value="/resources/faro/js/bootstrap-datepicker.js" />"></script>
+		<script type="text/javascript" src="/js/bootstrap-datepicker.js"></script>
 		<!-- timepicker -->
-		<script src="<c:url value="/resources/faro/js/jquery.timepicker.min.js" />"></script>
+		<script type="text/javascript" src="/js/jquery.timepicker.min.js"></script>
 		<!-- animate number -->
-		<script src="<c:url value="/resources/faro/js/jquery.animateNumber.min.js" />"></script>
+		<script type="text/javascript" src="/js/jquery.animateNumber.min.js"></script>
 		<!-- google api -->
     	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJ-UwG2QhQze8fgx2B4KPAplCRT670Leo&sensor=false"></script>
     	<!-- google map controller -->
-    	<script src="<c:url value="/resources/faro/js/google-map.js" />"></script>
+    	<script type="text/javascript" src="/js/google-map.js"></script>
     	<!-- main jquery -->
-    	<script src="<c:url value="/resources/faro/js/main.js" />"></script>
+    	<script type="text/javascript" src="/js/main.js"></script>
 		<!-- scripts end -->
 		
 	</body>

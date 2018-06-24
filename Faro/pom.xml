@@ -6,7 +6,6 @@
 	<groupId>com.ericardo.faro</groupId>
 	<artifactId>Faro</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
 
 	<name>Faro</name>
 	<description>Restaurant app with table reservation</description>
@@ -76,4 +75,5 @@
 	</build>
 
 
+	<packaging>war</packaging>
 </project>

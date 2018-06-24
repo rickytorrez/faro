@@ -52,7 +52,7 @@ function init() {
             new google.maps.Marker({
                 position: latlng,
                 map: map,
-                icon: '/resources/faro/img/loc.png'
+                icon: '/img/loc.png'
             });
 
         });

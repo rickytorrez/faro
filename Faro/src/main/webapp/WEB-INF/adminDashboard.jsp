@@ -14,27 +14,27 @@
     	<!-- raleway font -->
     	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700|Raleway" rel="stylesheet">
     	<!-- bootstrap -->
-    	<link href="<c:url value="/resources/faro/css/bootstrap.min.css" />" rel="stylesheet" >
+    	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
     	<!-- open-iconic-bootstrap -->
-    	<link href="<c:url value="/resources/faro/css/open-iconic-bootstrap.min.css" />" rel="stylesheet" >
+    	<link rel="stylesheet" type="text/css" href="/css/open-iconic-bootstrap.min.css">
     	<!-- animate css -->
-    	<link href="<c:url value="/resources/faro/css/animate.css" />" rel="stylesheet" >
+    	<link rel="stylesheet" type="text/css" href="/css/animate.css">
     	<!-- owl caroul -->
-    	<link href="<c:url value="/resources/faro/css/owl.carousel.min.css" />" rel="stylesheet" >
+    	<link rel="stylesheet" type="text/css" href="/css/owl.carousel.min.css">
     	<!-- owl theme -->
-    	<link href="<c:url value="/resources/faro/css/owl.theme.default.min.css" />" rel="stylesheet" >
+   		<link rel="stylesheet" type="text/css" href="/css/owl.theme.default.min.css">
     	<!-- magnific -->
-    	<link href="<c:url value="/resources/faro/css/magnific-popup.css" />" rel="stylesheet" >
+    	<link rel="stylesheet" type="text/css" href="/css/magnific-popup.css">
     	<!-- datepicker -->
-    	<link href="<c:url value="/resources/faro/css/bootstrap-datepicker.css" />" rel="stylesheet" >
+    	<link rel="stylesheet" type="text/css" href="/css/bootstrap-datepicker.css">
     	<!-- timepicker -->
-    	<link href="<c:url value="/resources/faro/css/jquery.timepicker.css" />" rel="stylesheet" >
+    	<link rel="stylesheet" type="text/css" href="/css/jquery.timepicker.css">
     	<!-- icomoon -->
-    	<link href="<c:url value="/resources/faro/css/icomoon.css" />" rel="stylesheet" >
+    	<link rel="stylesheet" type="text/css" href="/css/icomoon.css">
     	<!-- style -->
-    	<link href="<c:url value="/resources/faro/css/style.css" />" rel="stylesheet" >
+    	<link rel="stylesheet" type="text/css" href="/css/style.css">
     	<!-- favicon -->
-    	<link rel="shortcut icon" type="image/png" href="resources/faro/img/faro_favico.png"/>
+    	<link rel="shortcut icon" type="image/png" href="/img/faro_favico.png"/>
     </head>
     
     <body data-spy="scroll" data-target="#site-navbar" data-offset="200">
@@ -128,31 +128,32 @@
     	
 		<!-- scripts -->
 		<!-- jquery -->
-		<script src="<c:url value="/resources/faro/js/jquery.min.js" />"></script>
+		<script type="text/javascript" src="/js/jquery.min.js"></script>
 		<!-- popper -->
-		<script src="<c:url value="/resources/faro/js/popper.min.js" />"></script>
+		<script type="text/javascript" src="/js/popper.min.js"></script>
 		<!-- bootstrap -->
-		<script src="<c:url value="/resources/faro/js/bootstrap.min.js" />"></script>
+		<script type="text/javascript" src="/js/bootstrap.min.js"></script>
 		<!-- easing -->
-		<script src="<c:url value="/resources/faro/js/jquery.easing.1.3.js" />"></script>
+		<script type="text/javascript" src="/js/jquery.easing.1.3.js"></script>
 		<!-- waypoint -->
-		<script src="<c:url value="/resources/faro/js/jquery.waypoints.min.js" />"></script>
+		<script type="text/javascript" src="/js/jquery.waypoints.min.js"></script>
 		<!-- carousel -->
-		<script src="<c:url value="/resources/faro/js/owl.carousel.min.js" />"></script>
+		<script type="text/javascript" src="/js/owl.carousel.min.js"></script>
 		<!-- pop up -->
-		<script src="<c:url value="/resources/faro/js/jquery.magnific-popup.min.js" />"></script>
+		<script type="text/javascript" src="/js/jquery.magnific-popup.min.js"></script>
 		<!-- datepicker -->
-		<script src="<c:url value="/resources/faro/js/bootstrap-datepicker.js" />"></script>
+		<script type="text/javascript" src="/js/bootstrap-datepicker.js"></script>
 		<!-- timepicker -->
-		<script src="<c:url value="/resources/faro/js/jquery.timepicker.min.js" />"></script>
+		<script type="text/javascript" src="/js/jquery.timepicker.min.js"></script>
 		<!-- animate number -->
-		<script src="<c:url value="/resources/faro/js/jquery.animateNumber.min.js" />"></script>
+		<script type="text/javascript" src="/js/jquery.animateNumber.min.js"></script>
 		<!-- google api -->
     	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJ-UwG2QhQze8fgx2B4KPAplCRT670Leo&sensor=false"></script>
     	<!-- google map controller -->
-    	<script src="<c:url value="/resources/faro/js/google-map.js" />"></script>
+    	<script type="text/javascript" src="/js/google-map.js"></script>
     	<!-- main jquery -->
-    	<script src="<c:url value="/resources/faro/js/main.js" />"></script>
+    	<script type="text/javascript" src="/js/main.js"></script>
 		<!-- scripts end -->
+		
 	</body>
 </html>
