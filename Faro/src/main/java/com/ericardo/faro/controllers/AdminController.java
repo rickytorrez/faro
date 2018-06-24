@@ -20,6 +20,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.ericardo.faro.models.Admin;
 import com.ericardo.faro.models.Reservation;
 import com.ericardo.faro.services.AdminService;
+import com.ericardo.faro.services.MessageService;
 import com.ericardo.faro.services.ReservationService;
 
 @Controller
@@ -31,6 +32,9 @@ public class AdminController {
 	
 	@Autowired
 	private ReservationService _rS;
+	
+	@Autowired
+	private MessageService _mS;
 	
 	/******************************** LOG IN ROUTE FOR ADMIN *********************************/
 
@@ -109,6 +113,7 @@ public class AdminController {
 		Admin admin = _aS.find( (Long) _session.getAttribute("id"));
 		_model.addAttribute("admin", admin);
 		_model.addAttribute("reservations", _rS.all());
+		_model.addAttribute("messages", _mS.all());
 		System.out.println("dashboard RM on _aC after adminDash");
 		return "adminDashboard";
 	}

@@ -14,35 +14,42 @@
 		<a href="/restaurant/logout">Log Out</a>
 		<h1>Welcome ${admin.name}</h1>
 		
-		<form action="/restaurant/newReservation" method="POST" >
+		<h3>Reservations</h3>
 		
-			<input type="date" name="day" />
-			
-			<select name="time">
-				<option value="8:00 p.m.">8:00 p.m.</option>
-				<option value="8:15 p.m.">8:15 p.m.</option>
-				<option value="8:30 p.m.">8:30 p.m.</option>	
-				<option value="8:45 p.m.">8:45 p.m.</option>	
-				<option value="9:00 p.m.">9:00 p.m.</option>	
-				<option value="9:15 p.m.">9:15 p.m.</option>	
-				<option value="9:30 p.m.">9:30 p.m.</option>	
-				<option value="9:45 p.m.">9:45 p.m.</option>	
-				<option value="10:00 p.m.">10:00 p.m.</option>	
-			</select>
-			<input type="submit" value="Create!"/>
-		</form>
-		<br><br><br>
 		<table border=1px>
 			<tr>
-				<th>Id</th>
+				<th>Guess</th>
 				<th>Day</th>
 				<th>Time</th>
+				<th>Party Size</th>
+				<th>E-mail</th>
+				<th>Phone</th>
 			</tr>
 			<c:forEach items="${reservations}" var="reservation">
 				<tr>
-					<td>${reservation.id}</td>
+					<td>${reservation.firstName} ${reservation.lastName}</td>
 					<td>${reservation.day}</td>
 					<td>${reservation.time}</td>
+					<td>${reservation.sizeOfParty}</td>
+					<td>${reservation.email}</td>
+					<td>${reservation.phone}</td>
+				</tr>
+			</c:forEach>
+		</table>
+		
+		<h3>Messages</h3>
+		
+		<table border=1px>
+			<tr>
+				<th>Name</th>
+				<th>E-mail</th>
+				<th>Message</th>
+			</tr>
+			<c:forEach items="${messages}" var="message">
+				<tr>
+					<td>${message.name}</td>
+					<td>${message.email}</td>
+					<td>${message.content}</td>
 				</tr>
 			</c:forEach>
 		</table>
